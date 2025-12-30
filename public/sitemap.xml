@@ -1,21 +1,21 @@
 <?xml version='1.0' encoding='utf-8'?>
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://localhost:80/</loc>
+    <loc>http://localhost:3000/</loc>
   </url>
   <url>
-    <loc>http://localhost:80/alumnos</loc>
+    <loc>http://localhost:3000/alumnos</loc>
   </url>
   <url>
-    <loc>http://localhost:80/preguntas</loc>
+    <loc>http://localhost:3000/preguntas</loc>
   </url>
   <url>
-    <loc>http://localhost:80/respuestas</loc>
+    <loc>http://localhost:3000/respuestas</loc>
   </url>
   <url>
-    <loc>http://localhost:80/examen</loc>
+    <loc>http://localhost:3000/examen</loc>
   </url>
   <url>
-    <loc>http://localhost:80/examen/corregir</loc>
+    <loc>http://localhost:3000/examen/corregir</loc>
   </url>
 </urlset>
