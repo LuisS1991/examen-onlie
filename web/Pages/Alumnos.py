@@ -1,6 +1,8 @@
 import reflex as rx
 from web.States.AlumnoState import AlumnoState
 from web.Modelos.Alumno import Alumno
+from web.Route import Route
+from web.Pages.Layout import layout
 
 
 def table_row_item(item: Alumno):
@@ -60,9 +62,9 @@ def form_alumnos() -> rx.Component:
     )
 
 
-@rx.page("/alumnos", on_load=AlumnoState.laod_data)
+@rx.page(Route.ALUMNOS.value, on_load=AlumnoState.laod_data)
 def alumnos() -> rx.Component:
-    return rx.container(
+    return layout(
         rx.vstack(
             rx.heading("Alumnos Curso 2025", size="9"),
             form_alumnos(),
@@ -73,8 +75,5 @@ def alumnos() -> rx.Component:
                 tabla_datos(),
                 rx.text("Loading...."),
             ),
-            spacing="5",
-            justify="center",
-            min_height="85vh",
-        ),
+        )
     )

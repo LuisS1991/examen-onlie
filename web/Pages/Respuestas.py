@@ -2,6 +2,8 @@ import reflex as rx
 from web.Modelos.Respuesta import Respuesta
 from web.Modelos.Pregunta import Pregunta
 from web.States.RespuestaState import RespuestaState
+from web.Route import Route
+from web.Pages.Layout import layout
 
 
 def table_row_item(item: Respuesta):
@@ -65,9 +67,9 @@ def form_data() -> rx.Component:
     )
 
 
-@rx.page("/respuestas", on_load=RespuestaState.laod_data)
+@rx.page(Route.RESPUESTAS.value, on_load=RespuestaState.laod_data)
 def respuestas() -> rx.Component:
-    return rx.container(
+    return layout(
         rx.vstack(
             rx.heading("Respuestas Curso 2025", size="9"),
             form_data(),
@@ -78,8 +80,5 @@ def respuestas() -> rx.Component:
                 tabla_datos(),
                 rx.text("No hay datos cargados"),
             ),
-            spacing="5",
-            justify="center",
-            min_height="85vh",
-        ),
+        )
     )

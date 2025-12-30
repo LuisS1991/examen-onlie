@@ -3,7 +3,7 @@ from web.Components.StudentInfoCard import student_info_card
 from web.Components.MultipleChoiceQuestion import multiple_choice_question
 from web.Components.TrueFalseQuestion import true_false_question
 from web.Components.SubmitButton import submit_button
-from web.Components.Footer import footer
+from web.Components.Footer import footer,footer_examen
 
 __all__ = [
     "forms_header",
@@ -12,4 +12,5 @@ __all__ = [
     "true_false_question",
     "submit_button",
     "footer",
+    "footer_examen"
 ]

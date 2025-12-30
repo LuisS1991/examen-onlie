@@ -28,6 +28,7 @@ def card_body():
             rx.input(
                 type="text",
                 placeholder="Ej: Juan Carlos García López",
+                name="nombre_completo",
                 class_name="w-full  rounded-lg border-2 border-gray-200 focus:border-blue-500 focus:outline-none transition-colors text-sm md:text-base",
             ),
         ),
@@ -42,6 +43,7 @@ def card_body():
             rx.input(
                 type="text",
                 placeholder="Ej: 1234567890",
+                name="cedula",
                 class_name="w-full  rounded-lg border-2 border-gray-200 focus:border-blue-500 focus:outline-none transition-colors text-sm md:text-base",
             ),
         ),
@@ -56,6 +58,7 @@ def card_body():
             rx.input(
                 type="text",
                 placeholder="Ej: G1-25",
+                name="grupo",
                 class_name="w-full  rounded-lg border-2 border-gray-200 focus:border-blue-500 focus:outline-none transition-colors text-sm md:text-base",
             ),
         ),

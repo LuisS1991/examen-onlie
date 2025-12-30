@@ -1,5 +1,5 @@
 import reflex as rx
-from web.States import IndexState
+from web.States import ExamenState
 from web.Schemas import PreguntaOut, RespuestaOut
 
 
@@ -15,49 +15,18 @@ def pregunta(pregunta: str):
     )
 
 
-""" def respuestas_item(option: RespuestaOut):
-    return rx.box(
-        rx.text(
-            rx.input(type="radio", class_name="sr-only"),
-            rx.box(
-                rx.icon("Circle", class_name="w-2 h-2 fill-white text-white"),
-                class_name=rx.cond(
-                    IndexState.is_selected_option_bool,
-                    "flex-shrink-0 w-5 h-5 rounded-full border-2 mr-4  flex items-center justify-center transition-all border-blue-500 bg-blue-500",
-                    "flex-shrink-0 w-5 h-5 rounded-full border-2 mr-4  flex items-center justify-center transition-all border-gray-400 group-hover:border-blue-400",
-                ),
-            ),
-            rx.text.span(
-                option.respuesta,
-                class_name=rx.cond(
-                    IndexState.is_selected_option_bool,
-                    "text-sm md:text-base transition-colors text-gray-900 font-medium",
-                    "text-sm md:text-base transition-colors text-gray-700",
-                ),
-            ),
-            as_="label",
-            class_name=rx.cond(
-                IndexState.is_selected_option_bool,
-                "flex items-center p-4 rounded-lg border-2 cursor-pointer transition-all duration-200 group border-blue-500 bg-blue-50",
-                "mb-2 flex items-center p-4 rounded-lg border-2 cursor-pointer transition-all duration-200 group border-gray-200 hover:border-blue-300 hover:bg-gray-50",
-            ),
-            on_click=lambda v: IndexState.toggle_optional_selected(option)
-        ),
-        class_name="space-y-4",
-    )
- """
-
-
 def respuestas_item(option: RespuestaOut):
-    # Estado para verificar si esta opción está seleccionada
-    is_selected = IndexState.selected_options.get(option.pregunta_id) == option.id
+    #Estado para verificar si esta opción está seleccionada
+    #selected_options.get(option.pregunta_id) == option.id
+    is_selected = ExamenState.is_selected_op.contains(f"{option.pregunta_id}-{option.id}")
     return rx.text(
+        is_selected,
         # Input tipo radio oculto
         rx.input(
             type="radio",
             class_name="sr-only",
             checked=is_selected,
-            on_change=lambda e: IndexState.toggle_optional_selected(
+            on_click=lambda e: ExamenState.toggle_optional_selected(
                 pregunta_id=option.pregunta_id, respuesta_id=option.id
             ),
         ),
