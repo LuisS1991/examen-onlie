@@ -6,7 +6,7 @@ pip install -r requirements.txt
 rm -rf public
 export REFLEX_LOGLEVEL=default
 reflex init
-reflex export --frontend-only
+REFLEX_API_URL=https://web-2514y8nbl8ye.up-de-fra1-k8s-1.apps.run-on-seenode.com reflex export --frontend-only
 unzip frontend.zip -d public
 rm -f frontend.zip
 deactivate
