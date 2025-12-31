@@ -11,7 +11,7 @@ config = rx.Config(
     # frontend_port=80,
     cors_allowed_origins=[
         "http://localhost:3000",
-        "https://web-2514y8nbl8ye.up-de-fra1-k8s-1.apps.run-on-seenode.com",
+        "https://examen-onlie.vercel.app",
     ],
     db_url=DATABASE_URL,
     plugins=[
