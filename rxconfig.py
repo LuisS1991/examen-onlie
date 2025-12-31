@@ -8,7 +8,11 @@ DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///examen_2025.db")
 
 config = rx.Config(
     app_name="web",
-    #frontend_port=80,
+    # frontend_port=80,
+    cors_allowed_origins=[
+        "http://localhost:3000",
+        "https://web-2514y8nbl8ye.up-de-fra1-k8s-1.apps.run-on-seenode.com",
+    ],
     db_url=DATABASE_URL,
     plugins=[
         rx.plugins.SitemapPlugin(),
