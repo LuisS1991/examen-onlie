@@ -1,0 +1,1 @@
+import"./react-CGNSJ77f.js";import{t as e}from"./createLucideIcon-MH-B67Z9.js";var t=[[`path`,{d:`M4 4v16`,key:`6qkkli`}]],n=e(`tally-1`,t);export{t as __iconNode,n as default};
