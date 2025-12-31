@@ -1,0 +1,1 @@
+import"./react-CGNSJ77f.js";import{t as e}from"./createLucideIcon-MH-B67Z9.js";var t=[[`polygon`,{points:`12 2 19 21 12 17 5 21 12 2`,key:`x8c0qg`}]],n=e(`navigation-2`,t);export{t as __iconNode,n as default};

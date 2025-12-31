@@ -1,0 +1,1 @@
+import"./react-CGNSJ77f.js";import{t as e}from"./createLucideIcon-MH-B67Z9.js";var t=[[`path`,{d:`M21 2H3v16h5v4l4-4h5l4-4V2zm-10 9V7m5 4V7`,key:`c0yzno`}]],n=e(`twitch`,t);export{t as __iconNode,n as default};

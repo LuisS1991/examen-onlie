@@ -1,0 +1,1 @@
+import"./react-CGNSJ77f.js";import{t as e}from"./createLucideIcon-MH-B67Z9.js";var t=[[`path`,{d:`M21 12a9 9 0 1 1-6.219-8.56`,key:`13zald`}]],n=e(`loader-circle`,t);export{t as __iconNode,n as default};
