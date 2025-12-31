@@ -1,1 +1,0 @@
-import"./react-B--VL5s9.js";import{t as e}from"./createLucideIcon-CvLqfqT7.js";var t=[[`path`,{d:`M4 4v16`,key:`6qkkli`}]],n=e(`tally-1`,t);export{t as __iconNode,n as default};

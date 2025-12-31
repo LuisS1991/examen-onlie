@@ -8,6 +8,7 @@ from web.Schemas.RespuesAlumnoExamen_Scheme import (
     RespuesAlumnoExamenOut,
 )
 from web.Schemas.MenuItemScheme import MenuItemScheme
+from web.Schemas.Usuario_Scheme import UsuarioCreate, UsuarioRead, UsuarioUpdate
 __all__ = [
     "MenuItemScheme",
     "AlumnoCreate",
@@ -23,4 +24,7 @@ __all__ = [
     "RespuesAlumnoExamenCreate",
     "RespuesAlumnoExamenUpdate",
     "RespuesAlumnoExamenOut",
+    "UsuarioCreate",
+    "UsuarioRead",
+    "UsuarioUpdate",
 ]

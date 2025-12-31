@@ -1,1 +1,0 @@
-import"./react-B--VL5s9.js";import{t as e}from"./createLucideIcon-CvLqfqT7.js";var t=[[`path`,{d:`m11 17-5-5 5-5`,key:`13zhaf`}],[`path`,{d:`m18 17-5-5 5-5`,key:`h8a8et`}]],n=e(`chevrons-left`,t);export{t as __iconNode,n as default};
