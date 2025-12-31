@@ -1,4 +1,4 @@
-from web.Modelos.RespuestaAlumno import RespuestaAlumno
+from web.Modelos.Respuesta_Alumno import RespuestaAlumno
 from web.Schemas.RespuesAlumnoExamen_Scheme import RespuesAlumnoExamenCreate, RespuesAlumnoExamenUpdate
 from web.Controlador.Base_Controller import BaseController
 from typing import List

@@ -15,8 +15,6 @@ class UsuarioCreate(UsuarioBase):
 class UsuarioRead(UsuarioBase):
     id: int
 
-    model_config = {"from_attributes": True}  # equivalente a orm_mode
-
 
 class UsuarioUpdate(BaseModel):
     nombre: Optional[str] = None

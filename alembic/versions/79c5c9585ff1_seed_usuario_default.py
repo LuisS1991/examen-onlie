@@ -1,8 +1,8 @@
 """seed usuario default
 
-Revision ID: cd6ae3f37ab6
-Revises: 378e41f45408
-Create Date: 2025-12-30 23:00:08.281619
+Revision ID: 79c5c9585ff1
+Revises: 442a7fa7fb21
+Create Date: 2025-12-31 10:18:30.265715
 
 """
 
@@ -12,9 +12,10 @@ from alembic import op
 import sqlalchemy as sa
 from passlib.hash import bcrypt
 
+
 # revision identifiers, used by Alembic.
-revision: str = "cd6ae3f37ab6"
-down_revision: Union[str, Sequence[str], None] = "378e41f45408"
+revision: str = "79c5c9585ff1"
+down_revision: Union[str, Sequence[str], None] = "442a7fa7fb21"
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
 
@@ -35,14 +36,15 @@ def upgrade() -> None:
 
         conn.execute(
             sa.text(
-                "INSERT INTO usuario (nombre, email, password, rol) "
-                "VALUES (:nombre, :email, :password, :rol)"
+                "INSERT INTO usuario (nombre, email, password, rol,activo) "
+                "VALUES (:nombre, :email, :password, :rol,:activo)"
             ),
             {
                 "nombre": "Luis Nantes",
                 "email": "nantesluis72@gmail.com",
                 "password": hashed_pw,
-                "rol": "admin",
+                "rol": "docente",
+                "activo": True,
             },
         )
 
@@ -50,4 +52,4 @@ def upgrade() -> None:
 def downgrade() -> None:
     """Downgrade schema."""
     conn = op.get_bind()
-    conn.execute(sa.text("DELETE FROM usuario WHERE email = 'admin@example.com'"))
+    conn.execute(sa.text("DELETE FROM usuario WHERE email = 'nantesluis72@gmail.com'"))
