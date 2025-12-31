@@ -18,3 +18,5 @@ class Route(Enum):
     RESPUESTAS = "/respuestas"
     EXAMEN = "/examen"
     EXAMEN_CORREGIR = "/examen/corregir"
+    LOGIN = "/login"
+    REGISTRAR="/registrar"

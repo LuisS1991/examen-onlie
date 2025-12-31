@@ -80,7 +80,7 @@ def footer() -> rx.Component:
                 flex_direction=["column", "column", "row"],
                 width="100%",
             ),
-            rx.divider(),
+           rx.divider(),
             rx.hstack(
                 rx.hstack(
                     footer_item("Privacy Policy", "/#"),

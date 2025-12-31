@@ -95,7 +95,7 @@ def sidebar_top_profile() -> rx.Component:
                             rx.spacer(),
                             rx.vstack(
                                 sidebar_item("Help & Support", "life-buoy", "/#"),
-                                rx.divider(margin="0"),
+                               rx.boxider(margin="0"),
                                 rx.hstack(
                                     rx.icon_button(
                                         rx.icon("user"), size="3", radius="full"
